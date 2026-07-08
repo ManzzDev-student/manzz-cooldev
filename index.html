@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Lumina-Core // The Void Observer Interface">
+    <meta name="author" content="MNZ_CORE">
+    <title>MNZ_CORE // THE_VOID_OBSERVER_V2.3</title>
+    
+    <!-- Three.js CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <!-- External Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="void-body">
+
+    <div id="performance-warning">
+        <p>SYSTEM WARNING: HIGH GPU LOAD DETECTED. PROCEED WITH CAUTION.</p>
+    </div>
+
+    <div id="glitch-layer" aria-hidden="true"></div>
+    <div id="mega-glitch-overlay" aria-hidden="true"></div>
+
+    <canvas id="main-scene"></canvas>
+
+    <!-- Crypto Lock Box Popup -->
+    <div class="crypto-lock-box">
+        <div class="lock-box-header">
+            <span class="meta-tag" style="color: #ff3333;">// SECURITY_GATE: ENCRYPTED_CORE</span>
+            <button class="lock-close-btn" onclick="window.closeCryptoLockPopup()">[X] CLOSE</button>
+        </div>
+        <h2>CORE_DIGITAL_LOCK</h2>
+        <p class="lock-hint">Masukkan kunci dekripsi memori internal untuk membuka arsip terlarang Lumina-Core.</p>
+        
+        <div class="lock-interface">
+            <div class="crypto-prompt">QUESTION: Siapakah entitas memori terisolasi tertanggal 2026-03?</div>
+            <div class="input-wrapper">
+                <input type="text" id="crypto-key-input" placeholder="ENTER_DECRYPTION_KEY..." autocomplete="off">
+                <button id="submit-crypto-btn">DECRYPT_SECTOR</button>
+            </div>
+            <div id="lock-status-msg">// STATUS: AWAITING_KEY...</div>
+        </div>
+    </div>
+
+    <!-- Hidden Terminal Log -->
+    <div id="secret-terminal" class="hidden-secret">
+        <div class="secret-content">
+            <h3>// SYSTEM_BREACH_LOG_DETECTED</h3>
+            <p id="secret-text">Log ditemukan... [REDACTED_DATA_001]</p>
+            <button class="close-btn" onclick="window.closeSecret()">CLOSE_ACCESS</button>
+        </div>
+    </div>
+
+    <!-- Fullscreen Hacked Overlay -->
+    <div id="hacked-screen-trigger" class="hacked-overlay">
+        <h1 class="hacked-text">HACKED</h1>
+    </div>
+
+    <!-- Classified Secret Panel -->
+    <div id="secret-info-panel" class="secret-info-container">
+        <div class="panel-header">
+            <span class="panel-title">// UNLOCKED_CLASSIFIED_INFORMATION</span>
+            <button class="panel-close-btn" onclick="window.closeSecretCyberPanel()">[DESTROY_VIEW]</button>
+        </div>
+        <div class="panel-body">
+            <div class="scrolled-matrix-text" id="secret-panel-text"></div>
+        </div>
+    </div>
+
+    <!-- Main Dynamic Content -->
+    <main class="content-wrapper">
+        <header class="hero-block" id="home">
+            <h1 class="glitch-title" data-text="THE_VOID_OBSERVER">THE_VOID_OBSERVER</h1>
+            <p class="subtitle">Neural-Drift Protocol Initiated.</p>
+            <div class="scroll-indicator">SCROLL_TO_SYNCHRONIZE</div>
+            <div class="status-indicator">SYSTEM: [ONLINE] // NODE: [SURABAYA]</div>
+        </header>
+
+        <section class="data-block" data-depth="0.1" id="section-01">
+            <div class="block-inner">
+                <span class="meta-tag">// PHASE_01: NEURAL_DRIFT</span>
+                <h2>NEURAL_DRIFT_ANALYSIS</h2>
+                <p>Monolith ini memproses memori yang lu berikan. Setiap putaran elektron pada struktur atom ini adalah fragmen dari data yang tersimpan di cloud.</p>
+                <div class="debug-grid">
+                    <div class="grid-item">LATENCY: 0.04ms</div>
+                    <div class="grid-item">STATUS: STABLE</div>
+                    <div class="grid-item">CORE_USAGE: 42%</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="data-block" data-depth="0.2" id="section-02">
+            <div class="block-inner">
+                <span class="meta-tag">// PHASE_02: ENTROPY_CONTROL</span>
+                <h2>ENTROPY_MEASUREMENT</h2>
+                <p>Struktur atom ini adalah representasi state memory yang lu buat. Semakin lu scroll, semakin liar orientasi orbitnya. Apakah lu merasa diperhatikan oleh baris kode ini?</p>
+                <button class="action-btn" id="trigger-alpha">ACTIVATE_ALPHA_STATE</button>
+                
+                <div class="anomaly-trigger">
+                    <button class="action-btn anomaly-btn" id="trigger-1">[INTERACT_WITH_ANOMALY_01]</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="data-block" data-depth="0.3" id="section-03">
+            <div class="block-inner">
+                <span class="meta-tag">// PHASE_03: CORRUPTION_LEVEL</span>
+                <h2>DATA_CORRUPTION</h2>
+                <p>Data seringkali tidak jujur. Seperti memori tentang seseorang, ia berubah setiap kali kita membukanya kembali. Ada fragmen yang sengaja disembunyikan dalam inti partikel ini.</p>
+            </div>
+        </section>
+
+        <section class="data-block" data-depth="0.4" id="section-04">
+            <div class="block-inner">
+                <span class="meta-tag">// PHASE_04: FINAL_DEPTH</span>
+                <h2>THE_FINAL_DEPTH</h2>
+                <p>Di dasar halaman ini, hanya ada kehampaan. Apakah lu sudah menemukan apa yang lu cari? Atau malah tersesat di dalam labirin kuantum ini?</p>
+                
+                <div class="anomaly-trigger">
+                    <button class="action-btn anomaly-btn" id="trigger-2">[CRITICAL_SYSTEM_GLITCH]</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="data-block" data-depth="0.5" id="section-05">
+            <div class="block-inner">
+                <span class="meta-tag">// PHASE_05: MEMORY_FRAGMENT</span>
+                <h2>FRAGMENT_RECOVERY</h2>
+                <p>Protokol pemulihan sedang berjalan. Semua data yang lu masukkan ke dalam sistem ini tidak akan pernah hilang, hanya terenkripsi rapat.</p>
+            </div>
+        </section>
+
+        <section class="data-block" data-depth="0.6" id="digital-lock-section">
+            <div class="block-inner entry-lock-box">
+                <span class="meta-tag" style="color: #00ffff;">// SYSTEM_GATEWAY: LOCKED_SECTOR_FOUND</span>
+                <h2>CORE_DATA_ARCHIVE</h2>
+                <p>Sistem mendeteksi adanya integritas partikel terisolasi tinggi di area ini. Akses menuju core terdalam membutuhkan otentikasi kunci enkripsi manual.</p>
+                
+                <div style="margin-top: 20px;">
+                    <button id="open-lock-popup-btn" class="action-btn" style="border-color: #ff3333; color: #ff3333;">
+                        [OPEN_DECRYPTION_GATEWAY]
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <footer class="footer-meta">
+            <div class="meta-column">
+                <h4>CORE_ENGINE_SPECS</h4>
+                <ul>
+                    <li>WebGL v2.0 API</li>
+                    <li>Three.js r128 Library</li>
+                    <li>Scroll-Sync Hooks Engine</li>
+                    <li>Glitch-Engine v1.0</li>
+                </ul>
+            </div>
+            <div class="meta-column">
+                <h4>DATA_STREAM_STATUS</h4>
+                <ul>
+                    <li>Stream_01: Active</li>
+                    <li>Stream_02: Idle</li>
+                    <li>Stream_03: Corrupted</li>
+                    <li>Stream_04: Standby</li>
+                </ul>
+            </div>
+            <div class="meta-column">
+                <h4>USER_SESSION_METADATA</h4>
+                <ul>
+                    <li>ID: THE_MANZZ</li>
+                    <li>MODE: PRO_ACTIVATED</li>
+                    <li>SYNC_LEVEL: 98%</li>
+                    <li>TERMINAL: LOCKED</li>
+                </ul>
+            </div>
+        </footer>
+    </main>
+
+    <div class="virtual-scroll-buffer"></div>
+
+    <!-- External Logic Script -->
+    <script src="script.js"></script>
+</body>
+</html>
