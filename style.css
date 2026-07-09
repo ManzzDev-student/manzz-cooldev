@@ -42,7 +42,7 @@ body.system-shaking { animation: earthquake 0.12s infinite; }
 .content-wrapper { position: relative; z-index: 10; width: 100%; max-width: 1200px; margin: 0 auto; padding: 0 40px; }
 
 .hero-block { height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; position: relative; width: 100%; }
-.glitch-title { font-size: clamp(2.3rem, 6vw, 5rem); font-weight: 900; color: var(--text-primary); letter-spacing: -2px; text-transform: uppercase; position: relative; margin-bottom: 20px; display: inline-block; }
+.glitch-title { font-size: clamp(2.5rem, 6vw, 5rem); font-weight: 900; color: var(--text-primary); letter-spacing: -2px; text-transform: uppercase; position: relative; margin-bottom: 20px; display: inline-block; }
 .glitch-title::before, .glitch-title::after { content: attr(data-text); position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: var(--bg-pure); }
 .glitch-title::before { left: 2px; text-shadow: -2px 0 var(--accent-cyan); clip: rect(44px, 450px, 56px, 0); animation: glitchAnim1 5s infinite linear alternate-reverse; }
 .glitch-title::after { left: -2px; text-shadow: -2px 0 var(--accent-magenta); clip: rect(85px, 450px, 140px, 0); animation: glitchAnim2 5s infinite linear alternate-reverse; }
